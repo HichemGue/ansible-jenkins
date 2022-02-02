@@ -4,7 +4,7 @@
     state: present  
 
 - name: start nginx
-  systemd:
+  service:
     name: nginx
     state: started
   
