@@ -1,14 +1,10 @@
 - name: install nginx
   yum: 
-    name:
-      - nginx
+    name: nginx
     state: present
-    update_cache: yes
-    cache_valid_time: 3600
   
-
 - name: start nginx
-  systemd:
+ service:
     name: nginx
     state: started
   
