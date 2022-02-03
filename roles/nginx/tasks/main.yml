@@ -7,10 +7,16 @@
   systemd:
     name: nginx
     state: started
-  
+
+- name: Creation dossier /var/www/html/
+  file:
+    path: /var/www/html/
+    state: directory
+    mode: '0755'
 
 - name: index
   template:
     src: index.html.j2
     dest: /var/www/html/index.html
+
 
